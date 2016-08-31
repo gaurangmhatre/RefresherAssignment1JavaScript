@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+</head>
+
+<body>
+  <h2 id "hello">List of Tesla users in california!</h2>
+   <button onclick="putCarsOwners()">Get Tesla Users</button>
+  
+  <p id="UsersOne"></p>
+  <p id="UsersTwo"></p>
+  <p id="UsersThree"></p>
+  
+<script>putCarsOwners();</script>
+
+  <script>
+    var Owners = '{"FromCalifornia":[' +
+      '{"firstName":"Elon","lastName":"Musk" },' +
+      '{"firstName":"Tim","lastName":"Ferriss" },' +
+      '{"firstName":"Gaurang","lastName":"Mhatre" }]}';
+
+    var objOwners = JSON.parse(Owners);
+
+    function putCarsOwners() {
+      
+      document.getElementById("UsersOne").innerHTML =  objOwners.FromCalifornia[0].firstName +" "+objOwners.FromCalifornia[0].lastName ;
+      document.getElementById("UsersTwo").innerHTML = objOwners.FromCalifornia[1].firstName +" "+objOwners.FromCalifornia[1].lastName ;
+      document.getElementById("UsersThree").innerHTML =  objOwners.FromCalifornia[2].firstName +" "+objOwners.FromCalifornia[2].lastName ;
+      
+      
+    }
+  </script>
+
+
+</body>
+
+

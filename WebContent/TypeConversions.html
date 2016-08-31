@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+
+<body>
+  <h1>Tesla Charger Station</h1> Your already have <b>30%</b> charged tesla.
+  <br></br>
+
+  Enter the percentage, till what you want to charge:
+  <input type="text" id="ExpectedchargePercentage">
+  <br>
+  <button onclick="calculateMinutes()">Calculate wait time</button>
+
+  <br> Duration you have to wait for charge in Minutes: <b id="ChargeTimeMinutes"></b>
+
+
+  <script>
+    function calculateMinutes() {
+      var ExpectedCharge = parseFloat(document.getElementById('ExpectedchargePercentage').value);
+
+      if (ExpectedCharge < 31) {
+        document.getElementById("ChargeTimeMinutes").innerHTML = "Don't Joke around";
+
+      } else {
+        var ChargeTimeMinutes = (ExpectedCharge - 30) * 2.5; // 1% charged in Two minute
+
+        document.getElementById("ChargeTimeMinutes").innerHTML = ChargeTimeMinutes;
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

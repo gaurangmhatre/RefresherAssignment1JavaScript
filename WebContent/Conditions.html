@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+  <script>
+    function selectTheManufacturingLocation(OrderIsFrom) {
+
+      if (OrderIsFrom == "San Jose") {
+        SelectedManufacturingLocation = "San Jose";
+      } else if (OrderIsFrom == "Fremont") {
+        SelectedManufacturingLocation = "Fremont";
+      } else {
+        SelectedManufacturingLocation = "San Francisco";
+      }
+      selectChargeLoaction(OrderIsFrom);
+      printResults(SelectedManufacturingLocation);
+    }
+
+    function selectChargeLoaction(OrderIsFrom) {
+      switch (OrderIsFrom) {
+        case "San Jose":
+          SelectedChargeLocation = "You can use charger near San Jose State University!";
+          break;
+        case "Fremont":
+          SelectedChargeLocation = "You can use charger near our manufacturing facility!";
+          break;
+        case "San Francisco":
+          SelectedChargeLocation = "You can use charger near San Francisco airport!";
+          break;
+        default:
+          SelectedChargeLocation = "Buy new Tesla";
+      }
+       document.getElementById("SelectedChargeLocationHere").innerHTML = SelectedChargeLocation;
+    }
+
+  
+    function printResults(SelectedManufacturingLocation) {
+      document.getElementById("SelectedManufacturingLocationHere").innerHTML = SelectedManufacturingLocation;
+    }
+  </script>
+</head>
+
+<body>
+  <h1> Select where you live:</h1>
+
+  <input type="radio" name="browser" onclick="selectTheManufacturingLocation(this.value)" value="San Jose">San Jose
+  <br>
+  <input type="radio" name="browser" onclick="selectTheManufacturingLocation(this.value)" value="Fremont">Fremont
+  <br>
+  <input type="radio" name="browser" onclick="selectTheManufacturingLocation(this.value)" value="San Francisco">San Francisco
+  <br>
+
+  <br>
+  <h2>Your order for tesla is placed at our manufacturing unit at:   <h1 id = "SelectedManufacturingLocationHere"></h1> 
+  </h2>
+  
+  </br></br>
+  <h2 id = "SelectedChargeLocationHere"></h2>
+
+  <script>
+  </script>
+
+</body>
+
+</html>

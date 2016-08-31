@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script>
+var str = "this text has two unique elements one key is 957445 and second key is 546875";
+document.getElementById("str").innerHTML = str;
+
+</script>
+
+</head>
+
+<body>
+
+<p>Click the button to search the KEY# in the entire text given,</p>
+
+<p id="str"></p>
+<br>
+<button onclick="myFunction()">Search</button>
+
+<p id="demo"></p>
+
+<script>
+
+var str = "This text has two unique keys, first key is 957445 and second key is 546875";
+document.getElementById("str").innerHTML = str;
+
+
+function myFunction() {
+    
+    var patt1 = /key\S/g;
+    
+    var patt2 = /\d{6}/g; 
+    var result = str.match(patt2);
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+
+</body>
+
+</html>
+

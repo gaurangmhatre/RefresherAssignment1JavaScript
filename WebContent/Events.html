@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+  <script>
+    var car = {
+      company: "Tesla",
+      model: "Model-S",
+      color: "Black"
+    }; //class CAR
+
+    function changeCarColor() {
+      car.color = "Red";
+      printResult();
+    }
+    
+    function printResult(){
+      document.getElementById("DisplayCarColorHere").innerHTML = "now " + car.color;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>My cars color is <u id = "DisplayCarColorHere"></u> 
+    </h1>
+
+  <button onclick="changeCarColor()">Change The Color</button>
+
+  <script>
+    document.getElementById("DisplayCarColorHere").innerHTML = car.color;
+  </script>
+
+</body>
+
+</html>

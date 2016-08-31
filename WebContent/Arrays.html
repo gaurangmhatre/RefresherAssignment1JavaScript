@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+  <script>
+    var car = {
+      company: "Tesla",
+      model: "Model-S",
+      color: "Black"
+    }; //class CAR
+
+    var manufacturingLocation = ["San Jose", "Fremont","San Francisco"]
+    
+   
+  </script>
+</head>
+
+<body>
+  <h2>Tesla is manufactured at <h1 id = "DisplayLocationsHere"></h1> 
+  
+  </h2>
+    
+  <script>
+    document.getElementById("DisplayLocationsHere").innerHTML = manufacturingLocation[0] +", "+manufacturingLocation[1]+" and "+manufacturingLocation[2] ;
+  </script>
+
+</body>
+
+</html>

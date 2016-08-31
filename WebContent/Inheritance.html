@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+    <script>
+        function Shape(x, y) {
+            this.x = x;
+            this.y = y;
+
+            document.getElementById("x").innerHTML = this.x;
+            document.getElementById("y").innerHTML = this.y;
+        }
+
+        function Circle(x, y, r) {
+            Shape.call(this, x, y);
+            this.r = r;
+            document.getElementById("r").innerHTML = this.r;
+        }
+
+        function clicked() {
+            Circle.prototype = new Circle(0,0,5); 
+        }
+    </script>
+</head>
+
+<body>
+    
+    <button onclick="clicked()">Display circle's origine and redious</button>
+    <br><br>
+    Origone is at <b id="x"></b>,<b id="y"></b>
+    <br>
+    Redious is :<b id="r"></b>
+
+
+</body>
+
+</html>

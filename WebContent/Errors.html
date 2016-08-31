@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+ <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1 id="Header">Start my car</h1>
+
+
+  <script>
+    try {
+      aaalert("Starting my Tesla");
+    } catch (err) {
+      document.getElementById("Header").innerHTML = err.message + ".   Start it properly!";
+    }finally {
+      
+      document.getElementById("Header").innerHTML = document.getElementById("Header").innerHTML + " Finally,You can  atleast open the window."
+    }
+  </script>
+</body>
+
+</html>
